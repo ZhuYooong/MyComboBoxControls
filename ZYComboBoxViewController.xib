@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13174"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ZYComboBoxViewController" customModule="ZhiHuiSheQuCA" customModuleProvider="target">
+            <connections>
+                <outlet property="pickerView" destination="e7X-9v-ZKv" id="qAq-JE-JAa"/>
+                <outlet property="toolBar" destination="kDj-dc-dZk" id="4JP-eM-ozr"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clipsSubviews="YES" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="260"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kDj-dc-dZk">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                    <items>
+                        <barButtonItem title="Cancel" id="I5d-H5-gHw">
+                            <connections>
+                                <action selector="btnCancelTapped:" destination="-1" id="ODe-mg-yEC"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="crD-4t-958"/>
+                        <barButtonItem title="Done" id="PJY-Gn-xqz">
+                            <connections>
+                                <action selector="btnDoneTapped:" destination="-1" id="4Pp-7u-Vye"/>
+                            </connections>
+                        </barButtonItem>
+                    </items>
+                    <connections>
+                        <outlet property="delegate" destination="-1" id="Map-cg-mhd"/>
+                    </connections>
+                </toolbar>
+                <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="e7X-9v-ZKv">
+                    <rect key="frame" x="0.0" y="44" width="375" height="216"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="EcQ-zt-CLM"/>
+                        <outlet property="delegate" destination="-1" id="wBE-TB-mPz"/>
+                    </connections>
+                </pickerView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="e7X-9v-ZKv" secondAttribute="trailing" id="Bcs-Yb-7kR"/>
+                <constraint firstItem="e7X-9v-ZKv" firstAttribute="top" secondItem="kDj-dc-dZk" secondAttribute="bottom" id="NP0-Rp-agq"/>
+                <constraint firstItem="e7X-9v-ZKv" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" id="VXN-PK-lW8"/>
+                <constraint firstItem="kDj-dc-dZk" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="WZd-C3-lPX"/>
+                <constraint firstItem="e7X-9v-ZKv" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="WzE-rz-7IA"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="kDj-dc-dZk" secondAttribute="trailing" id="cke-NY-SDA"/>
+                <constraint firstItem="kDj-dc-dZk" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="g5v-eB-4o0"/>
+            </constraints>
+            <nil key="simulatedTopBarMetrics"/>
+            <nil key="simulatedBottomBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="26.5" y="-136.5"/>
+        </view>
+    </objects>
+</document>
